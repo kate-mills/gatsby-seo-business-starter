@@ -34,11 +34,18 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 1.  **Open the source code and start editing!**
 
+    Edit siteMetadata in ./gatsby-config.js
+
+
+
     Your site is now running at `http://localhost:8000`!
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
 
     Open the `new-site directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+
+
+
 
 ## 🧐 What's inside?
 
@@ -82,13 +89,6 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
 ## 💫 Deploy
 
@@ -97,3 +97,5 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/kate-mills/gatsby-seo-business-starter)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/13c71e24-fe72-46e0-8d20-9eda5d165a44/deploy-status)](https://app.netlify.com/sites/gatsby-seo-business-starter/deploys)
