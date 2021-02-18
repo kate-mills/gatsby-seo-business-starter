@@ -4,6 +4,7 @@ module.exports = {
     titleTemplate: `%s | Gatsby SEO Business Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     baseUrl: `https://gatsby-seo-business-starter.netlify.app`, // No trailing slash allowed!
+    siteUrl: `https://gatsby-seo-business-starter.netlify.app`, // No trailing slash allowed!
     image: `/images/gatsby-astronaut.png`, // Path to your image you placed in the 'static' folder
     author: `kate-mills`,
     twitterUsername: `@gatsbyjs`,
@@ -31,6 +32,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
