@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    titleTemplate: `%s | Gatsby Default Starter`,
+    title: `Gatsby SEO Business Starter`,
+    titleTemplate: `%s | Gatsby SEO Business Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     baseUrl: `https://gatsby-seo-business-starter.netlify.app`, // No trailing slash allowed!
     image: `/images/gatsby-astronaut.png`, // Path to your image you placed in the 'static' folder
@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `gatsby-seo-business-starter`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
