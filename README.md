@@ -32,9 +32,9 @@ Gatsby SEO Business Starter - This is for businesses (with postal address). Just
 
 ### 🧐 Start Editing siteMetadata in ./src/constants
 
-1.  **links.js**
+1.  links.js
 
-1.  **social-icons.js**
+1.  social-icons.js
 
 ### 🧐 Start Editing siteMetadata in ./src/components/Complete/SEO/SchemaOrg.js
 
