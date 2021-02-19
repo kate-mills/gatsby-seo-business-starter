@@ -8,10 +8,6 @@
   Gatsby SEO Business Starter
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
-
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
-
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
@@ -29,13 +25,22 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 ## 🧐 Start Editing
 
-1.  **Open the source code and start editing!**
+1.  **Start editing siteMetadata in ./gatsby-config.js!**
+
+    .
+    ├── Organization
+    │   ├── image   // main company image - place in 'static' folder
+    │   ├── siteUrl // No trailing slash allowed - required for sitemap
+    │   ├── geo     // https://www.latlong.net/convert-address-to-lat-long.html
+    │   ├── logo    // must be 112x112px, at minimum
 
 
-1.  **Edit siteMetadata in ./gatsby-config.js**
 
+1.  **Edit ./src/constants - links, social-links, address**
 
-1.  **Edit constants - links, social-links, address**
+    .
+    ├── links.js
+    ├── social-icons.js
 
 
 

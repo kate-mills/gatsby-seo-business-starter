@@ -8,8 +8,8 @@ module.exports = {
     altUrl: `${netlifyUrl}`,
     dateModified: `${new Date().toISOString()}`,
     defaultKeywords: `gatsby,seo,starter,business`,
-    image: `/images/gatsby-astronaut.png`, // Path to your image you placed in the 'static' folder
-    siteUrl: `${siteUrl}`, // No trailing slash allowed!
+    image: `/images/gatsby-astronaut.png`,
+    siteUrl: `${siteUrl}`,
     title: `Gatsby SEO Business Starter`,
     titleTemplate: `%s | Gatsby SEO Business Starter`,
     twitterUsername: `@gatsbyjs`,
@@ -24,11 +24,11 @@ module.exports = {
       },
       description: `Gatsby SEO Business Starter - Kick off your next, great Gatsby project with this seo business starter.  This starter ships with all basic components - just put your info in siteMetadata.`,
       email: `mailto:dev@example.com`,
-      geo: {  // https://www.latlong.net/convert-address-to-lat-long.html
+      geo: {
         lat: 38.329239,
         long: -122.295921,
       },
-      logo: `${siteUrl}/images/starter-logo.png`,
+      logo: `${siteUrl}/images/logo.png`,
       name: `Gatsby SEO Business Starter`,
       phone: `+1-707-266-8106`,
       priceRange: `$$$`,
