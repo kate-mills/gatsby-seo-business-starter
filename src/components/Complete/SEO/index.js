@@ -5,7 +5,7 @@ import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 import SchemaOrg from './SchemaOrg'
 
-const SEO = ({ title, description, image, article, keywords }) => {
+const SEO = ({ title, description, image, article, keywords, lang }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -32,7 +32,13 @@ const SEO = ({ title, description, image, article, keywords }) => {
 
   return (
     <React.Fragment>
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+      <Helmet
+        title={seo.title}
+        titleTemplate={titleTemplate}
+        htmlAttributes={{
+          lang,
+        }}
+      >
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta name="keywords" content={seo.keywords} />
@@ -90,6 +96,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   article: PropTypes.bool,
+  lang: PropTypes.string,
 }
 
 SEO.defaultProps = {
@@ -97,6 +104,7 @@ SEO.defaultProps = {
   description: null,
   image: null,
   article: false,
+  lang: `en`,
 }
 
 const query = graphql`
