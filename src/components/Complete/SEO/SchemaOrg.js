@@ -24,6 +24,39 @@ export default React.memo(
         item: `${baseUrl}${link.path}`,
       }
    });
+    const openingHoursSpecification = [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday"
+          ],
+          "opens": "11:30",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "11:30",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "16:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "16:00",
+          "closes": "22:00"
+        }
+    ]
 
     const baseSchema = [
       {
@@ -35,6 +68,7 @@ export default React.memo(
           image: image,
           logo: organization.logo,
           name: organization.name,
+          openingHoursSpecification: openingHoursSpecification,
           priceRange: organization.priceRange,
           sameAs: organization.otherUrls,
           telephone: organization.phone, 
