@@ -24,6 +24,24 @@ Gatsby SEO Business Starter - This is for businesses (with postal address). Just
     gatsby develop
     ```
 
+
+### 🧐  New Github repo
+
+1.  Go: https://github.com/kate-mills?tab=repositories
+
+2.  Create: New repo
+
+3. Local
+
+    ```shell
+    git ls-remote # nothing 
+    git remote add origin <New Repo> 
+    git ls-remote # New Repo
+    git push origin master
+
+    ```
+
+
 ### 🧐 Start Editing siteMetadata in ./gatsby-config.js
 
 1.  **organization.geo** - https://www.latlong.net/convert-address-to-lat-long.html, or right click google maps
