@@ -2,20 +2,33 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby SEO Business Starter`,
     titleTemplate: `%s | Gatsby SEO Business Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    baseUrl: `https://gatsby-seo-business-starter.netlify.app`, // No trailing slash allowed!
+    defaultKeywords: `gatsby,seo,starter,business`,
     siteUrl: `https://gatsby-seo-business-starter.netlify.app`, // No trailing slash allowed!
-    altUrl: ``, //
+    altUrl: ``, // will be the netlify utl once I move to .com
     image: `/images/gatsby-astronaut.png`, // Path to your image you placed in the 'static' folder
     author: `Ally Digital Solutions`,
     twitterUsername: `@gatsbyjs`,
     dateModified: `${new Date().toISOString()}`,
     organization:{
-      name: `Ally Digital Solutions`,
-      url: `https://allydigitalsolutions.com`,
+      address: {
+        street: `555 Main St.`, // Suite or # if applicable
+        city: `Napa`,
+        state: `CA`,
+        zip:`94558`,
+        country: `USA`,
+      },
+      description: `Gatsby SEO Business Starter - Kick off your next, great Gatsby project with this seo business starter.  This starter ships with all basic components - just put your info in siteMetadata.`,
+      email: `mailto:dev@allydigitalsolutions.com`,
       logo: `https://allydigitalsolutions.com/images/logo.jpg`,
+      name: `Gatsby SEO Business Starter`,
+      phone: `+1-707-266-8106`,
+      priceRange: `$$$`,
+      url: `https://gatsby-seo-business-starter.netlify.app`,
+      otherUrls: [
+        `https://www.facebook.com/allydigitalsolutions`,
+        `https://instagram.com/allydigitalsolutions/`
+      ],
     },
-    defaultKeywords: `gatsby,seo,starter,business`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

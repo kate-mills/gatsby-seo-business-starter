@@ -10,9 +10,7 @@ const SEO = ({ title, description, image, article, keywords }) => {
   const { site } = useStaticQuery(query)
 
   const {
-    defaultTitle,
     titleTemplate,
-    defaultDescription,
     baseUrl,
     defaultImage,
     twitterUsername,
@@ -24,8 +22,8 @@ const SEO = ({ title, description, image, article, keywords }) => {
 
 
   const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
+    title: title || organization.name,
+    description: description || organization.description,
     image: `${baseUrl}${image || defaultImage}`,
     url: `${baseUrl}${pathname}`,
     keywords: keywords || defaultKeywords,
@@ -70,8 +68,8 @@ const SEO = ({ title, description, image, article, keywords }) => {
       {seo.image && <meta name="twitter:image" content={seo.image} />}
     </Helmet>
     <SchemaOrg
-      compoundTitle={`${seo.title} | ${defaultTitle}`}
-      defaultTitle={defaultTitle}
+      compoundTitle={`${seo.title} | ${organization.name}`}
+      defaultTitle={organization.name}
       pageTitle={seo.title}
       description={seo.description}
       url={seo.url}
@@ -105,16 +103,26 @@ const query = graphql`
   query completeSEO {
     site {
       siteMetadata {
-        defaultTitle: title
         titleTemplate
-        defaultDescription: description
-        baseUrl
+        baseUrl:siteUrl
         defaultImage: image
         twitterUsername
         organization{
           name
+          description
           url
           logo
+          phone
+          priceRange
+          email
+          address{
+            street
+            city
+            state
+            zip
+            country
+          }
+          otherUrls
         }
         dateModified
         defaultKeywords

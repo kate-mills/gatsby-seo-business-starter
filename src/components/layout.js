@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import SEO from "./seo"
 import {Navbar} from "./Complete"
 import "./layout.css"
 
@@ -26,7 +25,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <SEO/>
       <Navbar  siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
