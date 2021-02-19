@@ -25,7 +25,7 @@ Gatsby SEO Business Starter - This is for businesses (with postal address). Just
     ```
 
 
-## 🧐 Start Editing siteMetadata in ./gatsby-config.js
+### 🧐 Start Editing siteMetadata in ./gatsby-config.js
 
 1.  ** organization.geo - https://www.latlong.net/convert-address-to-lat-long.html, or right click google maps**
 
@@ -33,13 +33,13 @@ Gatsby SEO Business Starter - This is for businesses (with postal address). Just
 1.  ** organization.logo -must be 112x112px, at minimum**
 
 
-## 🧐 Start Editing siteMetadata in ./src/constants
+### 🧐 Start Editing siteMetadata in ./src/constants
 
 1.  **links**
 
 1.  **social-icons**
 
-## 🧐 What's inside?
+### 🧐 What's inside?
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
