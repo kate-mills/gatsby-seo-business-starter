@@ -110,6 +110,10 @@ const query = graphql`
         organization{
           name
           description
+          geo{
+            lat
+            long
+          }
           url
           logo
           phone

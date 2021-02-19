@@ -29,6 +29,7 @@ export default React.memo(
       {
         '@context': 'http://schema.org',
           '@type': 'LocalBusiness',
+          '@id': organization.url,
           description: organization.description,
           email: organization.email,
           image: image,
@@ -46,6 +47,11 @@ export default React.memo(
             postalcode: organization.address.zip,
             streetAddress: organization.address.street,
           },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: organization.geo.lat,
+          longitude: organization.geo.long,
+        }
       },
       {
         '@context': 'https://schema.org',
