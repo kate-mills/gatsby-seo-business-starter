@@ -25,44 +25,46 @@ Gatsby SEO Business Starter - This is for businesses (with postal address). Just
     ```
 
 
-### 🧐  New Github repo
+###  New Github repo
 
-1.  Go: https://github.com/kate-mills?tab=repositories
+1.  Create: New Repo - https://github.com/kate-mills?tab=repositories
 
-2.  Create: New repo
-
-3. Local
+2.  Local
 
     ```shell
     git ls-remote # nothing 
-    git remote add origin <New Repo> 
+    git remote add origin  # <New Repo> 
     git ls-remote # New Repo
     git push origin master
 
     ```
 
 
-### 🧐 Start Editing siteMetadata in ./gatsby-config.js
+### ./gatsby-config.js - siteMetadata
 
-1.  **organization.geo** - https://www.latlong.net/convert-address-to-lat-long.html, or right click google maps
+1.  organization.geo    - https://www.latlong.net/convert-address-to-lat-long.html, or right click google maps
 
-1.  **organization.logo** -must be 112x112px, at minimum
+2.  organization.logo   - must be 112x112px, at minimum
 
-### 🧐 Start Editing siteMetadata in ./src/constants
+
+### Edit files in ./src/constants
 
 1.  links.js
 
-1.  social-icons.js
+2.  social-icons.js
 
-### 🧐 Start Editing siteMetadata in ./src/components/Complete/SEO/SchemaOrg.js
+
+### ./src/components/Complete/SEO/SchemaOrg.js
 
 1.  **Edit hardcoded** OpeningHoursSpecification
+
 
 ## 💫 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kate-mills/gatsby-seo-business-starter)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
 
 ## 💫 Status
 
