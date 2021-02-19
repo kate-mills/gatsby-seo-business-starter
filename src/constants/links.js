@@ -6,12 +6,12 @@ const links = [
   },
   {
     page: "About Us",
-    path: "/about-us",
+    path: "/about",
     id: 2,
   },
   {
     page: "Contact Us",
-    path: "/contact-us",
+    path: "/contact-",
     id: 3,
   },
 ]
