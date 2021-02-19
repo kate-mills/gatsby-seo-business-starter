@@ -28,13 +28,13 @@ module.exports = {
         lat: 38.329239,
         long: -122.295921,
       },
-      logo: `https://example.com/images/logo.jpg`,
+      logo: `${siteUrl}/images/starter-logo.png`,
       name: `Gatsby SEO Business Starter`,
       phone: `+1-707-266-8106`,
       priceRange: `$$$`,
       otherUrls: [
         `https://www.facebook.com/example`,
-        `https://instagram.com/example/`
+        `https://instagram.com/example`
       ],
       url: `${siteUrl}`,
     },
