@@ -5,6 +5,7 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     baseUrl: `https://gatsby-seo-business-starter.netlify.app`, // No trailing slash allowed!
     siteUrl: `https://gatsby-seo-business-starter.netlify.app`, // No trailing slash allowed!
+    altUrl: ``, //
     image: `/images/gatsby-astronaut.png`, // Path to your image you placed in the 'static' folder
     author: `Ally Digital Solutions`,
     twitterUsername: `@gatsbyjs`,
@@ -14,7 +15,7 @@ module.exports = {
       url: `https://allydigitalsolutions.com`,
       logo: `https://allydigitalsolutions.com/images/logo.jpg`,
     },
-    defaultKeywords: `gatsby,seo,starter`,
+    defaultKeywords: `gatsby,seo,starter,business`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

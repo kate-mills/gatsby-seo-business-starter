@@ -17,8 +17,6 @@ export default React.memo(
     dateModified,
   }) => {
   const linkCrumbs = links.map(link => {
-    console.log('url', url)
-    console.log('link', link)
       return {
         type: 'ListItem',
         name: link.page,
@@ -26,7 +24,7 @@ export default React.memo(
         item: `${baseUrl}${link.path}`,
       }
     })
-    console.log('dateModified', dateModified);
+
     const baseSchema = [
       {
         '@context': 'http://schema.org',
@@ -34,6 +32,7 @@ export default React.memo(
         itemListElement: [
           {
             '@type': 'WebPage',
+            name: pageTitle,
             position: 1,
             item: {
               '@id': url,

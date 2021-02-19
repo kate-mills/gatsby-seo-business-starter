@@ -19,6 +19,7 @@ const SEO = ({ title, description, image, article, keywords }) => {
     organization,
     dateModified,
     defaultKeywords,
+    altUrl,
   } = site.siteMetadata
 
 
@@ -28,15 +29,19 @@ const SEO = ({ title, description, image, article, keywords }) => {
     image: `${baseUrl}${image || defaultImage}`,
     url: `${baseUrl}${pathname}`,
     keywords: keywords || defaultKeywords,
+    altUrl: altUrl || false,
   }
 
   return (
     <React.Fragment>
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
-      <link rel="canonical" href={seo.url} />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta name="keywords" content={seo.keywords} />
+
+      <link rel="canonical" href={seo.url} />
+
+      {seo.altUrl && <link rel="shortlink" href={seo.altUrl} /> }
 
       {seo.url && <meta property="og:url" content={seo.url} />}
 
@@ -113,6 +118,7 @@ const query = graphql`
         }
         dateModified
         defaultKeywords
+        altUrl
       }
     }
   }
