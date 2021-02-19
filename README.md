@@ -7,6 +7,9 @@
 <h1 align="center">
   Gatsby SEO Business Starter
 </h1>
+<p>
+Gatsby SEO Business Starter - This is for businesses (with postal address). Just put your info in siteMetadata.
+</p>
 
 ## 🚀 Quick start
 

@@ -22,7 +22,7 @@ module.exports = {
         zip:`94558`,
         country: `USA`,
       },
-      description: `Gatsby SEO Business Starter - Kick off your next, great Gatsby project with this seo business starter.  This starter ships with all basic components - just put your info in siteMetadata.`,
+      description: `Gatsby SEO Business Starter - Kick off your next, great Gatsby project with this seo business (with postal address) starter. Just put your info in siteMetadata.`,
       email: `mailto:dev@example.com`,
       geo: {
         lat: 38.329239,

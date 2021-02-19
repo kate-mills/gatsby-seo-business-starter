@@ -44,7 +44,8 @@ export default React.memo(
             addressCountry: organization.address.country,
             addressLocality: organization.address.city,
             addressRegion: organization.address.state, 
-            postalcode: organization.address.zip,
+            name: organization.name,
+            postalCode: organization.address.zip,
             streetAddress: organization.address.street,
           },
         geo: {
