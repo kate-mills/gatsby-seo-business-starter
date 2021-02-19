@@ -7,7 +7,6 @@ module.exports = {
     author: `kate-mills`,
     altUrl: `${netlifyUrl}`,
     dateModified: `${new Date().toISOString()}`,
-    defaultKeywords: `gatsby,seo,starter,business`,
     image: `/images/gatsby-astronaut.png`,
     siteUrl: `${siteUrl}`,
     title: `Gatsby SEO Business Starter`,

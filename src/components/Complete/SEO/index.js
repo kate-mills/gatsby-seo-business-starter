@@ -5,7 +5,7 @@ import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 import SchemaOrg from './SchemaOrg'
 
-const SEO = ({ title, description, image, article, keywords, lang }) => {
+const SEO = ({ title, description, image, article, lang }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -16,7 +16,6 @@ const SEO = ({ title, description, image, article, keywords, lang }) => {
     twitterUsername,
     organization,
     dateModified,
-    defaultKeywords,
     altUrl,
   } = site.siteMetadata
 
@@ -26,7 +25,6 @@ const SEO = ({ title, description, image, article, keywords, lang }) => {
     description: description || organization.description,
     image: `${baseUrl}${image || defaultImage}`,
     url: `${baseUrl}${pathname}`,
-    keywords: keywords || defaultKeywords,
     altUrl: altUrl || false,
   }
 
@@ -41,7 +39,6 @@ const SEO = ({ title, description, image, article, keywords, lang }) => {
       >
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
-      <meta name="keywords" content={seo.keywords} />
 
       <link rel="canonical" href={seo.url} />
 
@@ -137,7 +134,6 @@ const query = graphql`
           otherUrls
         }
         dateModified
-        defaultKeywords
         altUrl
       }
     }
