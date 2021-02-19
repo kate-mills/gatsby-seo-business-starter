@@ -17,7 +17,7 @@ const Navbar = props => {
         <div className={styles.navCenter}>
           <div className={styles.navHeader}>
             <Link to={`/`} className={styles.title}>
-              Gatsby SEO Business Starter
+              {props.siteTitle}
             </Link>
 
             <button
