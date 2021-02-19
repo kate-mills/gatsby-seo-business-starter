@@ -1,37 +1,42 @@
+const siteUrl = `https://gatsby-seo-business-starter.netlify.app`; // change to .com url
+const netlifyUrl = `https://gatsby-seo-business-starter.netlify.app`;
+
+
 module.exports = {
   siteMetadata: {
+    author: `kate-mills`,
+    altUrl: `${netlifyUrl}`,
+    dateModified: `${new Date().toISOString()}`,
+    defaultKeywords: `gatsby,seo,starter,business`,
+    image: `/images/gatsby-astronaut.png`, // Path to your image you placed in the 'static' folder
+    siteUrl: `${siteUrl}`, // No trailing slash allowed!
     title: `Gatsby SEO Business Starter`,
     titleTemplate: `%s | Gatsby SEO Business Starter`,
-    defaultKeywords: `gatsby,seo,starter,business`,
-    siteUrl: `https://gatsby-seo-business-starter.netlify.app`, // No trailing slash allowed!
-    altUrl: ``, // will be the netlify utl once I move to .com
-    image: `/images/gatsby-astronaut.png`, // Path to your image you placed in the 'static' folder
-    author: `Ally Digital Solutions`,
     twitterUsername: `@gatsbyjs`,
-    dateModified: `${new Date().toISOString()}`,
+
     organization:{
       address: {
-        street: `555 Example st.`, // Suite or # if applicable
+        street: `555 Example st.`,
         city: `Napa`,
         state: `CA`,
         zip:`94558`,
         country: `USA`,
       },
       description: `Gatsby SEO Business Starter - Kick off your next, great Gatsby project with this seo business starter.  This starter ships with all basic components - just put your info in siteMetadata.`,
-      email: `mailto:dev@allydigitalsolutions.com`,
+      email: `mailto:dev@example.com`,
       geo: {  // https://www.latlong.net/convert-address-to-lat-long.html
         lat: 38.329239,
         long: -122.295921,
       },
-      logo: `https://allydigitalsolutions.com/images/logo.jpg`,
+      logo: `https://example.com/images/logo.jpg`,
       name: `Gatsby SEO Business Starter`,
       phone: `+1-707-266-8106`,
       priceRange: `$$$`,
-      url: `https://gatsby-seo-business-starter.netlify.app`,
       otherUrls: [
-        `https://www.facebook.com/allydigitalsolutions`,
-        `https://instagram.com/allydigitalsolutions/`
+        `https://www.facebook.com/example`,
+        `https://instagram.com/example/`
       ],
+      url: `${siteUrl}`,
     },
   },
   plugins: [
@@ -64,8 +69,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: `https://gatsby-seo-business-starter.netlify.app`,
-        sitemap: `https://gatsby-seo-business-starter.netlify.app/sitemap.xml`,
+        host: `${siteUrl}`,
+        sitemap: `${siteUrl}/sitemap.xml`,
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
