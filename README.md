@@ -39,6 +39,9 @@ Gatsby SEO Business Starter - This is for businesses (with postal address). Just
 
     ```
 
+3.  Go to Netlify:  Create new site from GitHub -  https://app.netlify.com/teams/kate-mills/sites 
+
+
 
 ### ./gatsby-config.js - siteMetadata
 
