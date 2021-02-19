@@ -6,8 +6,15 @@ module.exports = {
     baseUrl: `https://gatsby-seo-business-starter.netlify.app`, // No trailing slash allowed!
     siteUrl: `https://gatsby-seo-business-starter.netlify.app`, // No trailing slash allowed!
     image: `/images/gatsby-astronaut.png`, // Path to your image you placed in the 'static' folder
-    author: `kate-mills`,
+    author: `Ally Digital Solutions`,
     twitterUsername: `@gatsbyjs`,
+    dateModified: `${new Date().toISOString()}`,
+    organization:{
+      name: `Ally Digital Solutions`,
+      url: `https://allydigitalsolutions.com`,
+      logo: `https://allydigitalsolutions.com/images/logo.jpg`,
+    },
+    defaultKeywords: `gatsby,seo,starter`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
