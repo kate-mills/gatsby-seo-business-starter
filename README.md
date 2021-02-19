@@ -32,9 +32,13 @@ Gatsby SEO Business Starter - This is for businesses (with postal address). Just
 
     .
     ├── Organization
+
     │   ├── image   // main company image - place in 'static' folder
+
     │   ├── siteUrl // No trailing slash allowed - required for sitemap
-    │   ├── geo     // https://www.latlong.net/convert-address-to-lat-long.html
+
+    │   ├── geo     // https://www.latlong.net/convert-address-to-lat-long.html, or right click google maps
+
     │   ├── logo    // must be 112x112px, at minimum
 
 
