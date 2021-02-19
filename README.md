@@ -16,7 +16,6 @@ Gatsby SEO Business Starter - This is for businesses (with postal address). Just
 1.  **Create a Gatsby site.**
 
     ```shell
-    # create a new Gatsby site using the default starter
     gatsby new new-site https://github.com/kate-mills/gatsby-seo-business-starter
     ```
 
@@ -26,30 +25,19 @@ Gatsby SEO Business Starter - This is for businesses (with postal address). Just
     ```
 
 
-## 🧐 Start Editing
+## 🧐 Start Editing siteMetadata in ./gatsby-config.js
 
-1.  **Start editing siteMetadata in ./gatsby-config.js!**
-
-    .
-**├── Organization**
-  **image   - main company image - place in 'static' folder**
-
-**siteUrl - No trailing slash allowed - required for sitemap**
-
-**geo     - https://www.latlong.net/convert-address-to-lat-long.html, or right click google maps**
-
-**logo    - must be 112x112px, at minimum**
+1.  ** organization.geo - https://www.latlong.net/convert-address-to-lat-long.html, or right click google maps**
 
 
-
-1.  **Edit ./src/constants - links, social-links, address**
-
-    .
-    ├── links.js
-    ├── social-icons.js
+1.  ** organization.logo -must be 112x112px, at minimum**
 
 
+## 🧐 Start Editing siteMetadata in ./src/constants
 
+1.  **links**
+
+1.  **social-icons**
 
 ## 🧐 What's inside?
 
