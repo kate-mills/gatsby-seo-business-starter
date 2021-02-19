@@ -1,6 +1,6 @@
-import React from 'react'
-import  links from '../../../constants/links'
-import { Helmet } from 'react-helmet'
+import React from "react"
+import links from "../../../constants/links"
+import { Helmet } from "react-helmet"
 
 export default React.memo(
   ({
@@ -15,87 +15,78 @@ export default React.memo(
     organization,
     dateModified,
   }) => {
-
-  const linkCrumbs = links.map(link => {
+    const linkCrumbs = links.map(link => {
       return {
-        type: 'ListItem',
+        type: "ListItem",
         name: link.page,
         position: link.id,
         item: `${baseUrl}${link.path}`,
       }
-   });
+    })
     const openingHoursSpecification = [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday"
-          ],
-          "opens": "11:30",
-          "closes": "22:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "11:30",
-          "closes": "23:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "16:00",
-          "closes": "23:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "16:00",
-          "closes": "22:00"
-        }
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday"],
+        opens: "11:30",
+        closes: "22:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Wednesday", "Thursday", "Friday"],
+        opens: "11:30",
+        closes: "23:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "16:00",
+        closes: "23:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Sunday",
+        opens: "16:00",
+        closes: "22:00",
+      },
     ]
 
     const baseSchema = [
       {
-        '@context': 'http://schema.org',
-          '@type': 'LocalBusiness',
-          '@id': organization.url,
-          description: organization.description,
-          email: organization.email,
-          image: image,
-          logo: organization.logo,
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "@id": organization.url,
+        description: organization.description,
+        email: organization.email,
+        image: image,
+        logo: organization.logo,
+        name: organization.name,
+        openingHoursSpecification: openingHoursSpecification,
+        priceRange: organization.priceRange,
+        sameAs: organization.otherUrls,
+        telephone: organization.phone,
+        url: organization.url,
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: organization.address.country,
+          addressLocality: organization.address.city,
+          addressRegion: organization.address.state,
           name: organization.name,
-          openingHoursSpecification: openingHoursSpecification,
-          priceRange: organization.priceRange,
-          sameAs: organization.otherUrls,
-          telephone: organization.phone, 
-          url: organization.url,
-          address: {
-            '@type': 'PostalAddress',
-            addressCountry: organization.address.country,
-            addressLocality: organization.address.city,
-            addressRegion: organization.address.state, 
-            name: organization.name,
-            postalCode: organization.address.zip,
-            streetAddress: organization.address.street,
-          },
+          postalCode: organization.address.zip,
+          streetAddress: organization.address.street,
+        },
         geo: {
-          '@type': 'GeoCoordinates',
+          "@type": "GeoCoordinates",
           latitude: organization.geo.lat,
           longitude: organization.geo.long,
-        }
+        },
       },
       {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
         name: `navigation`,
         itemListElement: linkCrumbs,
       },
     ]
-
 
     return (
       <Helmet>

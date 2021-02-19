@@ -24,14 +24,11 @@ Gatsby SEO Business Starter - This is for businesses (with postal address). Just
     gatsby develop
     ```
 
-
 ### 🧐 Start Editing siteMetadata in ./gatsby-config.js
 
 1.  **organization.geo** - https://www.latlong.net/convert-address-to-lat-long.html, or right click google maps
 
-
 1.  **organization.logo** -must be 112x112px, at minimum
-
 
 ### 🧐 Start Editing siteMetadata in ./src/constants
 
@@ -39,11 +36,9 @@ Gatsby SEO Business Starter - This is for businesses (with postal address). Just
 
 1.  **social-icons.js**
 
-
 ### 🧐 Start Editing siteMetadata in ./src/components/Complete/SEO/SchemaOrg.js
 
 1.  **Edit hardcoded** OpeningHoursSpecification
-
 
 ## 💫 Deploy
 
@@ -54,6 +49,5 @@ Gatsby SEO Business Starter - This is for businesses (with postal address). Just
 ## 💫 Status
 
 https://gatsby-seo-business-starter.netlify.app
-
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/13c71e24-fe72-46e0-8d20-9eda5d165a44/deploy-status)](https://app.netlify.com/sites/gatsby-seo-business-starter/deploys)

@@ -1,6 +1,5 @@
-const siteUrl = `https://gatsby-seo-business-starter.netlify.app`; // change to .com url
-const netlifyUrl = `https://gatsby-seo-business-starter.netlify.app`;
-
+const siteUrl = `https://gatsby-seo-business-starter.netlify.app` // change to .com url
+const netlifyUrl = `https://gatsby-seo-business-starter.netlify.app`
 
 module.exports = {
   siteMetadata: {
@@ -13,12 +12,12 @@ module.exports = {
     titleTemplate: `%s | Gatsby SEO Business Starter`,
     twitterUsername: `@gatsbyjs`,
 
-    organization:{
+    organization: {
       address: {
         street: `555 Example st.`,
         city: `Napa`,
         state: `CA`,
-        zip:`94558`,
+        zip: `94558`,
         country: `USA`,
       },
       description: `Gatsby SEO Business Starter - Kick off your next, great Gatsby project with this seo business (with postal address) starter. Just put your info in siteMetadata.`,
@@ -33,7 +32,7 @@ module.exports = {
       priceRange: `$$$`,
       otherUrls: [
         `https://www.facebook.com/example`,
-        `https://instagram.com/example`
+        `https://instagram.com/example`,
       ],
       url: `${siteUrl}`,
     },
@@ -66,12 +65,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
         host: `${siteUrl}`,
         sitemap: `${siteUrl}/sitemap.xml`,
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-netlify`,
