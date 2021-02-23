@@ -11,7 +11,7 @@ const links = [
   },
   {
     page: "Contact Us",
-    path: "/contact-",
+    path: "/contact",
     id: 3,
   },
 ]
