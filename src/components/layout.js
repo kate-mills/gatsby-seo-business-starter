@@ -1,7 +1,6 @@
 import React from "react"
 
 import { Navbar, Sidebar } from "./Complete"
-import "@fontsource/montserrat"
 import "./layout.css"
 
 
@@ -18,7 +17,7 @@ const Layout = ({ children }) => {
       <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <div
         style={{
-          margin: `0 auto`,
+          margin: `1rem auto`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
         }}
