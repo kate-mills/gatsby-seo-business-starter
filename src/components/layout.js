@@ -1,14 +1,9 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React from "react"
 
 import { Navbar, Sidebar } from "./Complete"
+import "@fontsource/montserrat"
 import "./layout.css"
+
 
 const Layout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false)

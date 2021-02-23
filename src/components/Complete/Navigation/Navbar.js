@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import logo from '../../../images/logo.svg'
 import { FaBars } from 'react-icons/fa'
 import {Link} from "gatsby"
-import links from '../../../constants/links'
+import {navigationLinks} from '../../../constants/links'
 import {PhoneNumber} from '../ContactInfo'
 
 
@@ -20,7 +20,7 @@ const Nav = ({toggleSidebar}) => {
           </button>
         </div>
         <ul className="nav-links">
-          {links.map(link => {
+          {navigationLinks.map(link => {
             return (
               <li key={link.id}>
                 <Link to={link.path}>{link.page}</Link>

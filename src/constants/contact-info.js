@@ -1,8 +1,12 @@
-const  fmtPhone = (a, p, s) => `(${a}) ${p} - ${s}`;
+let  fmtPhone = (a, p, s) => `(${a}) ${p} - ${s}`;
 
-export const areaCode = '555';
-export const prefix = '555';
-export const suffix = '5555';
+let areaCode = '555';
+let prefix = '555';
+let suffix = '5555';
+
+let emailPrefix = 'customerservice'
+let emailSuffix = '@gatsby-seo-business-starter';
+let emailExt = '.com'
 
 export const ConstantContactInfo =  {
 
@@ -12,10 +16,10 @@ export const ConstantContactInfo =  {
         return str.split(' ').join('%20')
     },
     subject: 'General%20query',
-    full_email:'customerservice@michelecorley.com',
-    prefix:'customerservice',
-    suffix: '@gatsby-seo-business-starter',
-    ext: '.com',
+    full_email: emailPrefix + emailSuffix + emailExt,
+    prefix: emailPrefix,
+    suffix: emailSuffix,
+    ext: emailExt,
   },
 
   Telephone: {

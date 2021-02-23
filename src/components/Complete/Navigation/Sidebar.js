@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import logo from '../../../images/logo.svg'
 import { FaTimes } from 'react-icons/fa'
 import {Link} from "gatsby"
-import links from '../../../constants/links'
+import {navigationLinks} from '../../../constants/links'
 import {PhoneNumber} from '../ContactInfo'
 
 const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
@@ -19,7 +19,7 @@ const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
           </button>
         </div>
         <ul className="links">
-          {links.map(link => {
+          {navigationLinks.map(link => {
             return (
               <li key={link.id}>
                 {' '}

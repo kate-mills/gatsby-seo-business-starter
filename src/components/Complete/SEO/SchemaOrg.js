@@ -1,5 +1,5 @@
 import React from "react"
-import links from "../../../constants/links"
+import {navigationLinks} from "../../../constants/links"
 import { Helmet } from "react-helmet"
 
 export default React.memo(
@@ -15,7 +15,7 @@ export default React.memo(
     organization,
     dateModified,
   }) => {
-    const linkCrumbs = links.map(link => {
+    const linkCrumbs = navigationLinks.map(link => {
       return {
         type: "ListItem",
         name: link.page,
