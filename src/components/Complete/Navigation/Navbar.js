@@ -15,7 +15,7 @@ const Nav = ({toggleSidebar}) => {
           <Link to="/">
             <img src={logo} alt="Logo" width="175px" height="54px" />
           </Link>
-          <button type="button" className="nav-toggle" onClick={toggleSidebar}>
+          <button type="button" aria-label="Open sidebar" className="nav-opener" onClick={toggleSidebar}>
             <FaBars />
           </button>
         </div>
@@ -56,7 +56,7 @@ const NavContainer = styled.nav`
       margin-bottom: unset;
     }
   }
-  .nav-toggle {
+  .nav-opener {
     background: transparent;
     border: transparent;
     color: var(--black);
@@ -68,7 +68,7 @@ const NavContainer = styled.nav`
     display: none;
   }
   @media (min-width: 992px) {
-    .nav-toggle {
+    .nav-opener {
       display: none;
     }
     .nav-center {
