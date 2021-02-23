@@ -13,8 +13,8 @@ const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
         className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`}
       >
         <div className="sidebar-header">
-          <img src={logo} className="logo" alt="hide & wild logo" width="136px" height="45px"/>
-          <button type="button" className="close-btn" onClick={toggleSidebar}>
+          <img src={logo} className="logo" alt="logo" width="136px" height="45px"/>
+          <button type="button" className="close-sidebar-btn" aria-label="Close sidebar" onClick={toggleSidebar}>
             <FaTimes />
           </button>
         </div>
@@ -48,7 +48,7 @@ const SidebarContainer = styled.div`
     align-items: center;
     padding: 1rem 1.5rem;
   }
-  .close-btn {
+  .close-sidebar-btn {
     background: transparent;
     border-color: transparent;
     color: var(--black);
@@ -58,12 +58,14 @@ const SidebarContainer = styled.div`
     outline: none;
     transition: var(--transition);
   }
-  .close-btn:hover {
+  .close-sidebar-btn:hover {
     color: var(--darkGrey);
   }
   .logo {
     justify-self: center;
-    height: 45px;
+    width: 160px;
+    height: 60px;
+    margin-bottom: 0;
   }
   .links {
     margin-bottom: 2rem;
