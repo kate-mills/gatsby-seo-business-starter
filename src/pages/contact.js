@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import { SEO } from "../components/Complete"
+import { SEO, ContactForm } from "../components/Complete"
 
 const Contact = ({ data }) => {
   return (
@@ -13,6 +13,7 @@ const Contact = ({ data }) => {
         image={data.seoImg.childImageSharp.fluid.src}
       />
       <h1>Contact Us</h1>
+      <ContactForm/>
       <p>Welcome to Contact us page</p>
       <Link to="/">Go back to the homepage</Link>
     </Layout>
