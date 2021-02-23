@@ -1,3 +1,4 @@
+
 const links = [
   {
     page: "Home",
@@ -5,15 +6,16 @@ const links = [
     id: 1,
   },
   {
-    page: "About Us",
-    path: "/about",
+    page: "About",
+    path: "/about/",
     id: 2,
   },
   {
-    page: "Contact Us",
-    path: "/contact",
+    page: "Contact",
+    path: "/contact/",
     id: 3,
   },
-]
+];
 
-export default links
+
+export default links;

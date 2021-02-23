@@ -1,3 +1,22 @@
+:root{
+  /* colors start */
+  --black: #000000cc;
+  --white: #ffffff;
+  --grey: gainsboro;
+  --darkGrey: #a9a9a9ff;
+  --primaryColor: #7bc070ff;
+  /* colors end */
+  --mainFF: 'Montserrat', sans-serif; /* font-family */
+  --mainSpacing: 0.3rem; /* letter-spacing */
+  --altSpacing: 0.0620rem;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5); /* box-shadow */
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --radius: 0.25rem; /* border-radius */
+  --transition: all 0.5s linear;
+  --maxWidth: 40rem;
+  --smallWidth: 85vw;
+  --fullWidth: 1170px;
+}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -52,6 +71,7 @@ template {
 }
 a {
   background-color: transparent;
+  text-decoration: none;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
@@ -354,6 +374,7 @@ ul {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  list-style-type: none;
   list-style-position: outside;
   list-style-image: none;
 }

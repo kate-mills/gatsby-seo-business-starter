@@ -6,26 +6,21 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
-import { Navbar } from "./Complete"
+import { Navbar, Sidebar } from "./Complete"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false)
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(isSidebarOpen => !isSidebarOpen)
+  }
 
   return (
     <>
-      <Navbar siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Navbar  isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <div
         style={{
           margin: `0 auto`,
@@ -46,10 +41,6 @@ const Layout = ({ children }) => {
       </div>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

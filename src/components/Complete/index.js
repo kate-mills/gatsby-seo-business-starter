@@ -1,4 +1,4 @@
-import Navbar from "./Navbar"
+import {Navbar, Sidebar} from "./Navigation"
 import SEO from "./SEO"
 
-export { Navbar, SEO }
+export { Navbar, Sidebar,  SEO }
