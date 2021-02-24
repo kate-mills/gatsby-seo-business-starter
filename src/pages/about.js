@@ -2,7 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import { SEO } from "../components/Complete"
+import Image from "../components/image"
+import { SEO, Banner } from "../components/Complete"
 
 const About = ({ data }) => {
   return (
@@ -12,9 +13,10 @@ const About = ({ data }) => {
         description="Unique about page description goes here."
         image={data.seoImg.childImageSharp.fluid.src}
       />
-      <h1>About Us</h1>
-      <p>Welcome to About us page</p>
-      <Link to="/">Go back to the homepage</Link>
+      <Banner title="About Us" subtitle="Welcome to the About us page.">
+        <Link to="/">Go back to the homepage</Link>
+        <Image />
+      </Banner>
     </Layout>
   )
 }
