@@ -1,19 +1,10 @@
 import React from 'react'
-//import Title from '../Title'
-import {PhoneNumber} from "../ContactInfo"
 import styled from 'styled-components'
 
 const Contact = () => {
   return (
     <ContactWrapper>
-      {/* <Title title="Schedule" subtitle="now" /> */}
       <div>
-        <div>
-          <p>
-            Please call, text or use the form below to get in touch.
-          </p>
-          <p>Call or Text :  <PhoneNumber/></p>
-        </div>
         <form
           className="form"
           name="contact"
@@ -135,6 +126,5 @@ const ContactWrapper = styled.section`
       width: 50%;
     }
   }
-
 `
 export default Contact
