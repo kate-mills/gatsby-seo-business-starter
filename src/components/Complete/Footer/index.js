@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {socialLinks} from '../../../constants/links'
-import {PhoneNumber} from '../ContactInfo'
+import {PhoneNumber, Email} from '../ContactInfo'
 
 const Footer = ()=>{
   return (
@@ -27,14 +27,20 @@ const Footer = ()=>{
           })
         }
       </div>
-      <p className="phone-number"><PhoneNumber/></p>
-      <p>© {new Date().getFullYear()}, Built with {` `} <a href="https://www.gatsbyjs.com">Gatsby</a></p>
+      <div className="contact-info small-text">
+        <div><Email/></div>
+        <div><span className="middot">&middot;</span></div>
+        <div><PhoneNumber/></div>
+      </div>
+
+      <p className="tiny-text last-p">All rights reserved. © {new Date().getFullYear()}</p>
     </FooterWrapper>
     </div>
   )
 }
 const FooterWrapper = styled.footer`
   &{
+    font-family: var(--mainFF);
     margin: 0 auto;
     text-align: center;
     margin-top: 2rem;
@@ -61,8 +67,30 @@ const FooterWrapper = styled.footer`
   }
   .facebook{color: #00f;}
   .instagram{color: magenta;}
-  .phone-number{
-      margin-top: 1rem;
+
+  .contact-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .middot{
+    margin: auto .34rem;
+  }
+  .small-text{
+    font-size: 0.85rem;
+  }
+  .tiny-text{
+    font-size: 0.75rem;
+  }
+  .last-p{
+    margin-bottom: unset;
+  }
+
+  @media (min-width: 768px){
+    .contact-info{
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 `
 export default Footer;
