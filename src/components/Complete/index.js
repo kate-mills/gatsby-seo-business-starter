@@ -1,14 +1,13 @@
 import SEO from "./SEO"
 import {Navbar, Sidebar} from "./Navigation"
-import {PhoneNumber} from "./ContactInfo"
+import {PhoneNumber, Email} from "./ContactInfo"
 import ContactForm from "./ContactForm"
 import Footer from "./Footer"
 
 export {
   SEO,
-  Navbar,
-  Sidebar,
-  PhoneNumber,
+  Navbar, Sidebar,
+  PhoneNumber, Email,
   ContactForm,
   Footer,
 }
