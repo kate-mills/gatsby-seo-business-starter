@@ -4,6 +4,7 @@ import {PhoneNumber, Email, Address} from "./ContactInfo"
 import ContactForm from "./ContactForm"
 import Footer from "./Footer"
 import Banner from "./Banner"
+import {FluidImage, FixedImage } from "./Img"
 
 export {
   SEO,
@@ -15,4 +16,6 @@ export {
   ContactForm,
   Footer,
   Banner,
+  FluidImage,
+  FixedImage,
 }

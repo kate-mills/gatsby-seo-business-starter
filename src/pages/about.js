@@ -2,8 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import { SEO, Banner } from "../components/Complete"
+import { SEO, Banner, FluidImage } from "../components/Complete"
 
 const About = ({ data }) => {
   return (
@@ -14,8 +13,8 @@ const About = ({ data }) => {
         image={data.seoImg.childImageSharp.fluid.src}
       />
       <Banner title="About Us" subtitle="Welcome to the About us page.">
+        <FluidImage maxWidth="220px" fluid={data.seoImg.childImageSharp.fluid}/>
         <Link to="/">Go back to the homepage</Link>
-        <Image />
       </Banner>
     </Layout>
   )
@@ -25,8 +24,9 @@ export const query = graphql`
   {
     seoImg: file(relativePath: { eq: "gatsby-icon.png" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth:220) {
           src
+          ...GatsbyImageSharpFluid
         }
       }
     }
