@@ -33,4 +33,61 @@ const Email = props => {
 Email.defaultProps = ConstantContactInfo.Email;
 
 
-export {PhoneNumber, Email,}
+// Add prop.block for envelope style
+const Address = props => {
+  return (
+      <div>
+        <address style={{ whiteSpace: 'pre-line' }}>
+          <span
+            className="company-name"
+            style={{ paddingLeft: '0',}}
+          >
+            {props.company}
+            {
+              props.block ?
+                <br/>
+                :
+                ', '
+            }
+          </span>
+          <span
+            className="street-address"
+            style={{ paddingLeft: '5px', whiteSpace: 'nowrap' }}
+          >
+            {props.street}
+          </span>
+          <span
+            className="suite"
+            style={{ paddingLeft: '5px', whiteSpace: 'nowrap' }}
+          >
+            {props.suite}
+          </span>
+          {
+            props.block && <br/>
+          }
+          <span
+            className="city"
+            style={{ paddingLeft: '5px', whiteSpace: 'nowrap' }}
+          >
+            {props.city}
+          </span>
+          <span
+            className="state"
+            style={{ paddingLeft: '5px', whiteSpace: 'nowrap' }}
+          >
+            {props.state}
+          </span>
+          <span
+            className="zip"
+            style={{ paddingLeft: '5px', whiteSpace: 'nowrap' }}
+          >
+            {props.zip}
+          </span>
+        </address>
+      </div>
+  )
+}
+Address.defaultProps = ConstantContactInfo.Address;
+
+
+export {PhoneNumber, Email, Address}

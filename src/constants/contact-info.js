@@ -30,6 +30,7 @@ export const ConstantContactInfo =  {
   },
 
   Address: {
+    company: 'Company Name', // Envelope style
     street: '555 Exaple Street',
     city: 'Napa',
     state: 'CA',
