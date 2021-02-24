@@ -1,8 +1,14 @@
-import {Navbar, Sidebar} from "./Navigation"
-import ContactForm from "./ContactForm"
-import {PhoneNumber} from "./ContactInfo"
-
-
 import SEO from "./SEO"
+import {Navbar, Sidebar} from "./Navigation"
+import {PhoneNumber} from "./ContactInfo"
+import ContactForm from "./ContactForm"
+import Footer from "./Footer"
 
-export { Navbar, Sidebar, ContactForm, PhoneNumber, SEO }
+export {
+  SEO,
+  Navbar,
+  Sidebar,
+  PhoneNumber,
+  ContactForm,
+  Footer,
+}

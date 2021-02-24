@@ -1,5 +1,5 @@
 import React from "react"
-import { FaFacebookF, FaInstagram } from "react-icons/fa"
+import { GrFacebook, GrInstagram } from 'react-icons/gr'
 
 const navigationLinks = [
   {
@@ -21,14 +21,18 @@ const navigationLinks = [
 
 const socialLinks = [
   {
-    icon: <FaFacebookF />,
-    label: "Go to Ally Digital Solutions Facebook Page",
-    url: "https://facebook.com/allydigitalsolutions",
+    icon: <GrFacebook />,
+    id: 1,
+    label: "Go to our Facebook Page",
+    name: 'facebook',
+    url: "https://facebook.com/yourfacebookpage",
   },
   {
-    icon: <FaInstagram />,
-    label: "Go to Ally Digital Solutions Instagram Page",
-    url: "https://instagram.com/allydigitalsolutions",
+    icon: <GrInstagram />,
+    id: 2,
+    label: "Go to our Instagram Page",
+    name: 'instagram',
+    url: "https://instagram.com/yourinsahandle",
   },
 ]
 
