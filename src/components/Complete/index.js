@@ -5,6 +5,7 @@ import ContactForm from "./ContactForm"
 import Footer from "./Footer"
 import Banner from "./Banner"
 import {FluidImage, FixedImage } from "./Img"
+import Btn from './Btn'
 
 export {
   SEO,
@@ -18,4 +19,5 @@ export {
   Banner,
   FluidImage,
   FixedImage,
+  Btn,
 }
