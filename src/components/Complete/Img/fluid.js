@@ -16,7 +16,7 @@ const query = graphql`
 const FluidImage = (props) => {
   const {defaultImg:{childImageSharp:{fluid:defaultFluid}}} = useStaticQuery(query);
   return (
-    <div style={{maxWidth: props.maxWidth, marginBottom: props.marginBottom,}}>
+    <div className="fluid-image-box" style={{maxWidth: props.maxWidth, marginBottom: props.marginBottom,}}>
       <Img fluid={props.fluid || defaultFluid}/>
     </div>
   )
