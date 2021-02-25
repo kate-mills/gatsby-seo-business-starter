@@ -21,7 +21,7 @@ const Contact = ({ data }) => {
 
 export const query = graphql`
   {
-    seoImg: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+    seoImg: file(relativePath: { eq: "pink-astronaut.jpg" }) {
       childImageSharp {
         fluid {
           src

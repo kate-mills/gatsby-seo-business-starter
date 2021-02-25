@@ -9,7 +9,6 @@ const IndexPage = () => (
     <Banner title="Home Page" subtitle="Welcome to your new Gatsby site.  Now go build something great!">
       <FixedImage />
       <Btn to="/contact" text="Contact us"/>
-
     </Banner>
   </Layout>
 )
