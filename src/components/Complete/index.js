@@ -1,6 +1,6 @@
 import SEO from "./SEO"
 import {Navbar, Sidebar} from "./Navigation"
-import {PhoneNumber, Email, Address} from "./ContactInfo"
+import {Address, Email, PhoneNumber} from "./ContactInfo"
 import ContactForm from "./ContactForm"
 import Footer from "./Footer"
 import Banner from "./Banner"
@@ -11,9 +11,9 @@ export {
   SEO,
   Navbar,
   Sidebar,
-  PhoneNumber,
-  Email,
   Address,
+  Email,
+  PhoneNumber,
   ContactForm,
   Footer,
   Banner,
