@@ -15,20 +15,20 @@ module.exports = {
     organization: {
       address: {
         street: `555 Example st.`,
-        city: `Napa`,
+        city: `City`,
         state: `CA`,
-        zip: `94558`,
+        zip: `99999`,
         country: `USA`,
       },
       description: `Gatsby SEO Business Starter - Kick off your next, great Gatsby project with this seo business (with postal address) starter. Just put your info in siteMetadata.`,
-      email: `mailto:dev@example.com`,
+      email: `mailto:mail@example.com`,
       geo: {
         lat: 38.329239,
         long: -122.295921,
       },
       logo: `${siteUrl}/images/logo.png`,
       name: `Gatsby SEO Business Starter`,
-      phone: `+1-707-266-8106`,
+      phone: `+1-555-555-5555`,
       priceRange: `$$$`,
       otherUrls: [
         `https://www.facebook.com/example`,
