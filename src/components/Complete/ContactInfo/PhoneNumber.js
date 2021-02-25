@@ -20,7 +20,12 @@ const PhoneNumber = () => {
     className="phone"
     href={`tel:${phone}`}
     rel="nofollow"
-    style={{whiteSpace: 'nowrap',}}>
+    style={{
+      whiteSpace: 'nowrap',
+      padding: '0.1rem 0.3rem',
+      width: 'fit-content',
+      height: 'fit-content',
+    }}>
     {displayPhone}
     </a>
 }
