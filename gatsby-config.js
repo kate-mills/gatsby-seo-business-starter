@@ -6,7 +6,7 @@ module.exports = {
     author: `kate-mills`,
     altUrl: `${netlifyUrl}`,
     dateModified: `${new Date().toISOString()}`,
-    image: `/images/gatsby-astronaut.png`,
+    image: `/images/pink-astronaut.png`,
     siteUrl: `${siteUrl}`,
     title: `Gatsby SEO Business Starter`,
     titleTemplate: `%s | Gatsby SEO Business Starter`,
@@ -14,6 +14,7 @@ module.exports = {
 
     organization: {
       address: {
+        name: `Gatsby SEO Business Starter`,
         street: `555 Example st.`,
         city: `City`,
         state: `CA`,
@@ -21,7 +22,13 @@ module.exports = {
         country: `USA`,
       },
       description: `Gatsby SEO Business Starter - Kick off your next, great Gatsby project with this seo business (with postal address) starter. Just put your info in siteMetadata.`,
-      email: `mailto:mail@example.com`,
+
+      email: `mailto:customerservice@example.com`,
+      displayEmail: {
+        prefix: `customerservice`,
+        suffix: `@example`,
+        ext: `.com`,
+      },
       geo: {
         lat: 38.329239,
         long: -122.295921,
@@ -29,6 +36,7 @@ module.exports = {
       logo: `${siteUrl}/images/logo.png`,
       name: `Gatsby SEO Business Starter`,
       phone: `+1-555-555-5555`,
+      displayPhone: `(555) 555-5555`,
       priceRange: `$$$`,
       otherUrls: [
         `https://www.facebook.com/example`,

@@ -1,40 +1,57 @@
 import React from 'react'
-import {ConstantContactInfo} from '../../../constants/contact-info'
+import { useStaticQuery, graphql } from "gatsby"
 
-const PhoneNumber = ({ areaCode, prefix, suffix, phone  }) => {
+const PhoneNumber = () => {
+  const {site:{siteMetadata:{organization:{phone, displayPhone}}}} = useStaticQuery(query)
   return <a
     className="phone"
-    href={`tel:+${areaCode}${prefix}${suffix}`}
+    href={`tel:${phone}`}
     rel="nofollow"
     style={{whiteSpace: 'nowrap',}}>
-    {phone}
+    {displayPhone}
     </a>
 }
-PhoneNumber.defaultProps = ConstantContactInfo.Telephone;
-
 
 const Email = props => {
-  let fmtSubject = ConstantContactInfo.Email.fmtSubject(props.subject)
+  const {site:{siteMetadata:{organization:{email, 
+    displayEmail:{prefix, suffix, ext}
+  }}}} = useStaticQuery(query)
+
+  const formatter = (str) => {
+    if(str && str.length > 0)
+      return str.split(' ').join('%20')
+  }
+  let fmtSubject = formatter((props.subject))
   return (
     <a
       className="email"
       target="_top"
-      href={`mailto:${props.full_email}?subject=${fmtSubject}`}
+      href={`${email}?subject=${fmtSubject}`}
     >
       <span style={{whiteSpace: 'nowrap',}}>
-        {props.prefix}</span>
+        {prefix}</span>
       <span style={{whiteSpace: 'nowrap',}}>
-        {props.suffix}</span>
+        {suffix}</span>
       <span style={{whiteSpace: 'nowrap',}}>
-        {props.ext}</span>
+        {ext}</span>
     </a>
   )
 }
-Email.defaultProps = ConstantContactInfo.Email;
+Email.defaultProps = {
+    subject: 'General%20query',
+}
 
 
 // Add prop.block for envelope style
 const Address = props => {
+  const {site:{siteMetadata:{organization:{address:{
+    name,
+    street,
+    city,
+    state,
+    zip,
+  }}}}} = useStaticQuery(query)
+
   return (
       <div>
         <address style={{ whiteSpace: 'pre-line' }}>
@@ -42,7 +59,7 @@ const Address = props => {
             className="company-name"
             style={{ paddingLeft: '0',}}
           >
-            {props.company}
+            {name}
             {
               props.block ?
                 <br/>
@@ -54,13 +71,7 @@ const Address = props => {
             className="street-address"
             style={{ paddingLeft: '5px', whiteSpace: 'nowrap' }}
           >
-            {props.street}
-          </span>
-          <span
-            className="suite"
-            style={{ paddingLeft: '5px', whiteSpace: 'nowrap' }}
-          >
-            {props.suite}
+            {street}
           </span>
           {
             props.block && <br/>
@@ -69,25 +80,52 @@ const Address = props => {
             className="city"
             style={{ paddingLeft: '5px', whiteSpace: 'nowrap' }}
           >
-            {props.city}
+            {city}
           </span>
           <span
             className="state"
             style={{ paddingLeft: '5px', whiteSpace: 'nowrap' }}
           >
-            {props.state}
+            {state}
           </span>
           <span
             className="zip"
             style={{ paddingLeft: '5px', whiteSpace: 'nowrap' }}
           >
-            {props.zip}
+            {zip}
           </span>
         </address>
       </div>
   )
 }
-Address.defaultProps = ConstantContactInfo.Address;
+
+const query = graphql`
+  query contactInformation {
+    site {
+      siteMetadata {
+        organization {
+          phone
+          displayPhone
+          email
+          displayEmail {
+            prefix
+            suffix
+            ext
+          }
+          address {
+            name
+            street
+            city
+            state
+            zip
+          }
+        }
+      }
+    }
+  }
+`
+
+
 
 
 export {PhoneNumber, Email, Address}
