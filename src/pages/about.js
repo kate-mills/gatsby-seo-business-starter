@@ -4,6 +4,8 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import { SEO, Banner, FluidImage } from "../components/Complete"
 
+import styled from 'styled-components'
+
 const About = ({ data }) => {
   return (
     <Layout>
@@ -12,13 +14,25 @@ const About = ({ data }) => {
         description="Unique about page description goes here."
         image={data.seoImg.childImageSharp.fluid.src}
       />
+      <SectionWrapper>
       <Banner title="About Us" subtitle="Welcome to the About us page.">
-        <FluidImage maxWidth="220px" fluid={data.seoImg.childImageSharp.fluid}/>
+        <div className="centered-fluid-image">
+          <FluidImage maxWidth="220px" fluid={data.seoImg.childImageSharp.fluid}/>
+        </div>
         <Link to="/">Go back to the homepage</Link>
       </Banner>
+    </SectionWrapper>
     </Layout>
   )
 }
+
+const SectionWrapper = styled.section`
+  & .centered-fluid-image{
+    max-width: 220px;
+    width: 220px; /* needed to center img.*/
+    margin: 0 auto;
+  }
+`
 
 export const query = graphql`
   {
