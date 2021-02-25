@@ -8,7 +8,7 @@ const Footer = ()=>{
     <div>
       <hr/>
     <FooterWrapper>
-      <h3 className="follow-us-on">Follow us on</h3>
+      <p className="follow-us-on">Follow us on</p>
       <div className="social-icons">
         {
           socialLinks.map(({icon, id, label, name, url}) => {
@@ -41,63 +41,67 @@ const Footer = ()=>{
   )
 }
 const FooterWrapper = styled.footer`
-  &{
-    font-family: var(--mainFF);
-    margin: 0 auto;
+  & {
     text-align: center;
-    margin-top: 2rem;
   }
-  .follow-us-on{
-    font-family: var(--mainFF);
+  .follow-us-on {
     font-size: 1.35rem;
     font-weight: 300;
-    margin-bottom: 0.24rem;
+    margin-bottom: 0;
   }
-  .social-icons{
+  .social-icons {
     display: flex;
     flex-direction: column;
     flex-flow: wrap;
     width: 50%;
-    max-width: 250px;
-    margin: 1rem auto;
+    max-width: 250px;     /* May need to change width depending on number of icons */
+    margin: 0.25rem auto 0.75rem;
     align-items: center;
     justify-content: space-evenly;
-    .icon{
+    .icon {
       font-size: 1.5rem;
       margin: 1rem;
     }
-    .facebook{color: #00f;}
-    .instagram{color: deeppink;}
-    .icon{
+    .facebook {
+      color: #00f;
+    }
+    .instagram {
+      color: deeppink;
+    }
+    .icon {
      -webkit-transition: var(--transition);
       transition: var(--transition);
     }
-    .icon:hover{
+    .icon:hover {
       transform: translateY(-5px);
-   }
+    }
   }
-  .phone-email-box{
+  .phone-email-box {
     font-size: 0.85rem;
     display: flex;
     flex-direction: column;
     margin: 0.5rem auto;
     width: 100%;
-    .middot{
-      margin: auto .34rem;
+    .middot {
+      display:none;
     }
   }
-  .address-box{
+  .address-box {
     font-size: 0.85rem;
   }
-  .tiny-last-p{
+  .tiny-last-p {
     font-size: 0.75rem;
     margin-bottom: unset;
   }
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     .phone-email-box{
       flex-direction: row;
       font-size: 1rem;
       justify-content: center;
+      .middot {
+        display:unset;
+        margin: 0 .34rem;
+      }
     }
   }
 `
