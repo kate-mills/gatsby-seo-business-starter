@@ -67,7 +67,14 @@ const FooterWrapper = styled.footer`
       margin: 1rem;
     }
     .facebook{color: #00f;}
-    .instagram{color: magenta;}
+    .instagram{color: deeppink;}
+    .icon{
+     -webkit-transition: var(--transition);
+      transition: var(--transition);
+    }
+    .icon:hover{
+      transform: translateY(-5px);
+   }
   }
   .phone-email-box{
     font-size: 0.85rem;

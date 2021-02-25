@@ -12,7 +12,7 @@
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5); /* box-shadow */
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --radius: 0.25rem; /* border-radius */
-  --transition: all 0.5s linear;
+  --transition: all 0.3s linear;
   --maxWidth: 40rem;
   --smallWidth: 85vw;
   --fullWidth: 1170px;
