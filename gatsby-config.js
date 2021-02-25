@@ -60,16 +60,17 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-seo-business-starter`,
-        short_name: `starter`,
+        short_name: `Seo Business`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        description: `The application does cool things and makes your life better.`,
+        background_color: `#ffb1b1`,
+        theme_color: `#ffb1b1`,
         display: `minimal-ui`,
-        icons_options: {
-          purpose: `any maskable`,
-        },
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
         crossOrigin: `use-credentials`,
+        icon_options: {
+          purpose: `any maskable`,
+        },
       },
     },
     {
