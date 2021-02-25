@@ -1,28 +1,29 @@
 const siteUrl = `https://gatsby-seo-business-starter.netlify.app` // change to .com url
 const netlifyUrl = `https://gatsby-seo-business-starter.netlify.app`
+const companyName = `Gatsby SEO Business Starter`
+const description = `${companyName} - Kick off your next, great Gatsby project with this seo business (with postal address) starter. Just put your info in siteMetadata.`
 
 module.exports = {
   siteMetadata: {
     author: `kate-mills`,
     altUrl: `${netlifyUrl}`,
     dateModified: `${new Date().toISOString()}`,
-    image: `/images/pink-astronaut.png`,
+    image: `/images/default-image.jpg`, // ./static/images/
     siteUrl: `${siteUrl}`,
-    title: `Gatsby SEO Business Starter`,
-    titleTemplate: `%s | Gatsby SEO Business Starter`,
+    title: `${companyName}`,
+    titleTemplate: `%s | ${companyName}`,
     twitterUsername: `@gatsbyjs`,
 
     organization: {
       address: {
-        name: `Gatsby SEO Business Starter`,
+        name: `${companyName}`,
         street: `555 Example st.`,
         city: `City`,
         state: `CA`,
         zip: `99999`,
         country: `USA`,
       },
-      description: `Gatsby SEO Business Starter - Kick off your next, great Gatsby project with this seo business (with postal address) starter. Just put your info in siteMetadata.`,
-
+      description: `${description}`,
       email: `mailto:customerservice@example.com`,
       displayEmail: {
         prefix: `customerservice`,
@@ -33,8 +34,8 @@ module.exports = {
         lat: 38.329239,
         long: -122.295921,
       },
-      logo: `${siteUrl}/images/logo.png`,
-      name: `Gatsby SEO Business Starter`,
+      logo: `${siteUrl}/images/logo.png`, // ./static/images/
+      name: `${companyName}`,
       phone: `+1-555-555-5555`,
       displayPhone: `(555) 555-5555`,
       priceRange: `$$$`,
@@ -62,7 +63,7 @@ module.exports = {
         name: `gatsby-seo-business-starter`,
         short_name: `Seo Business`,
         start_url: `/`,
-        description: `The application does cool things and makes your life better.`,
+        description: `${description}`,
         background_color: `#ffb1b1`,
         theme_color: `#ffb1b1`,
         display: `minimal-ui`,
