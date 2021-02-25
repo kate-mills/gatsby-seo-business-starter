@@ -6,6 +6,7 @@ import Footer from "./Footer"
 import Banner from "./Banner"
 import {FluidImage, FixedImage } from "./Img"
 import Btn from './Btn'
+import Title from './Title'
 
 export {
   SEO,
@@ -20,4 +21,5 @@ export {
   FluidImage,
   FixedImage,
   Btn,
+  Title,
 }

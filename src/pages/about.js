@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import { SEO, Banner, FluidImage } from "../components/Complete"
+import { SEO, Banner, FluidImage, Title } from "../components/Complete"
 
 import styled from 'styled-components'
 
@@ -21,6 +21,7 @@ const About = ({ data }) => {
         </div>
         <Link to="/">Go back to the homepage</Link>
       </Banner>
+        <Title title="Our" subtitle="Location"/>
     </SectionWrapper>
     </Layout>
   )
