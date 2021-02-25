@@ -54,7 +54,6 @@ const SidebarContainer = styled.div`
     color: var(--black);
     cursor: pointer;
     font-size: 2rem;
-    margin-top: 0.2rem;
     outline: none;
     transition: var(--transition);
   }
@@ -64,7 +63,7 @@ const SidebarContainer = styled.div`
   .logo {
     justify-self: center;
     width: 160px;
-    height: 60px;
+    min-height: 60px;
     margin-bottom: 0;
   }
   .links {
