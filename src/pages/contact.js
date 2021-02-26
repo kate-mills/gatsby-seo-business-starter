@@ -47,7 +47,7 @@ const PageWrapper = styled.section`
 
 export const query = graphql`
   {
-    seoImg: file(relativePath: { eq: "pink-astronaut.jpg" }) {
+    seoImg: file(relativePath: { eq: "default-image.jpg" }) {
       childImageSharp {
         fluid {
           src

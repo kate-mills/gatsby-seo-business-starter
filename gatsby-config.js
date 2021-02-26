@@ -67,7 +67,7 @@ module.exports = {
         background_color: `#ffb1b1`,
         theme_color: `#ffb1b1`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
         crossOrigin: `use-credentials`,
         icon_options: {
           purpose: `any maskable`,
