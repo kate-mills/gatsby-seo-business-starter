@@ -14,17 +14,14 @@ const query = graphql`
   }
 `
 
-const PhoneNumber = () => {
+const PhoneNumber = (props) => {
   const {site:{siteMetadata:{organization:{phone, displayPhone}}}} = useStaticQuery(query)
   return <a
-    className="phone"
+    className={props.className}
     href={`tel:${phone}`}
     rel="nofollow"
     style={{
       whiteSpace: 'nowrap',
-      padding: '0.1rem 0.3rem',
-      width: 'fit-content',
-      height: 'fit-content',
     }}>
     {displayPhone}
     </a>

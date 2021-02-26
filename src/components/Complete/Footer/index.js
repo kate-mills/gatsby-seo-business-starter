@@ -28,9 +28,9 @@ const Footer = ()=>{
         }
       </div>
       <div className="phone-email-box">
-        <div><Email/></div>
-        <div><span className="middot">&middot;</span></div>
-        <div><PhoneNumber/></div>
+        <Email className="footer-email"/>
+        <span className="middot">&middot;</span>
+        <PhoneNumber className="footer-phone"/>
       </div>
       <div className="address-box">
         <Address/>
@@ -51,12 +51,10 @@ const FooterWrapper = styled.footer`
   }
   .social-icons {
     display: flex;
-    flex-direction: column;
     flex-flow: wrap;
     width: 50%;
     max-width: 250px;     /* May need to change width depending on number of icons */
-    margin: 0.25rem auto 0.75rem;
-    align-items: center;
+    margin: 0.25rem auto 0;
     justify-content: space-evenly;
     .icon {
       font-size: 1.5rem;
@@ -80,9 +78,15 @@ const FooterWrapper = styled.footer`
     font-size: 0.85rem;
     display: flex;
     flex-direction: column;
-    margin: 0.5rem auto;
     width: 100%;
+    margin: 0.5rem 0;
+    .footer-email,
+    .footer-phone {
+      margin: 0.25rem;
+    }
     .middot {
+      position: relative;
+      top: 0.4rem;
       display:none;
     }
   }

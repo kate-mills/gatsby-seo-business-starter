@@ -30,14 +30,9 @@ const Email = props => {
   let fmtSubject = formatter((props.subject))
   return (
     <a
-      className="email"
+      className={props.className}
       target="_top"
       href={`${email}?subject=${fmtSubject}`}
-      style={{
-        padding: '0.1rem 0.3rem',
-        width: 'fit-content',
-        height: 'fit-content',
-      }}
     >
       <span style={{whiteSpace: 'nowrap',}}>
         {prefix}</span>
