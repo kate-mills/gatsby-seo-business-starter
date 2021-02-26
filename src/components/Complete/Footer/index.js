@@ -86,7 +86,7 @@ const FooterWrapper = styled.footer`
     }
     .middot {
       position: relative;
-      top: 0.4rem;
+      top: 0.3rem;
       display:none;
     }
   }
