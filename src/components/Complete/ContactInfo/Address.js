@@ -30,7 +30,7 @@ const Address = props => {
   }}}}} = useStaticQuery(query)
 
   return (
-      <div>
+      <div className={props.className}>
         <address style={{ whiteSpace: 'pre-line' }}>
           <span
             className="company-name"
@@ -57,7 +57,7 @@ const Address = props => {
             className="city"
             style={{ paddingLeft: '5px', whiteSpace: 'nowrap' }}
           >
-            {city}
+            {city},
           </span>
           <span
             className="state"
