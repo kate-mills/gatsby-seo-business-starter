@@ -18,6 +18,7 @@ const Contact = () => {
           <div>
             <input
               ref={input => input && input.focus()}
+              aria-label="Name"
               type="text"
               name="name"
               id="name"
@@ -28,6 +29,7 @@ const Contact = () => {
           </div>
           <div>
             <input
+              aria-label="Email"
               type="email"
               name="email"
               id="email"
@@ -39,6 +41,7 @@ const Contact = () => {
           <div>
           <div>
               <input
+                aria-label="Phone"
                 type="tel"
                 name="phone"
                 id="phone"
@@ -48,6 +51,7 @@ const Contact = () => {
               />
           </div>
             <textarea
+              aria-label="Message"
               name="message"
               id="message"
               rows="5"
