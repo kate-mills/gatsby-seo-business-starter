@@ -65,6 +65,12 @@ Gatsby SEO Business Starter - This is for businesses (with postal address). Just
 # 6 - Edit ./src/components/Complete/SEO/SchemaOrg.js
 #### hardcode business hours
 
+# 7 - Contact Page Map
+    Go To GoogleMaps: https://www.google.com/maps/
+    Click Share
+    Click Embed a map
+
+
 # 7 - Start Customizing!!
 
 
