@@ -7,13 +7,13 @@ const Btn = ({to, text, color, className}) => {
 }
 
 export default styled(Btn)`
-  background-color: ${props =>  props.borderColor ? `var(--black)`: `var(--primaryColor)`};
+  background-color: ${props =>  props.backgroundColor? props.backgroundColor: `var(--primaryColor)`};
   border-width: 3px;
-  border-color: ${props =>  props.borderColor ? props.borderColor: `var(--primaryColor)`};
+  border-color: ${props =>  props.backgroundColor ? props.backgroundColor : `var(--primaryColor)`};
   border-radius: var(--radius);
   border-style: solid;
   color:var(--black);
-  color: ${props =>  props.borderColor ? `var(--white)`: `var(--black)`};
+  color: ${props =>  props.color ? props.color: `var(--black)`};
   cursor: pointer;
   display: ${props => props.display ?  props.display: `inline-block` };
   font-family: var(--mainFF);
@@ -28,8 +28,8 @@ export default styled(Btn)`
   transition: var(--transition);
 
   &:hover{
-    border-color: ${props =>  (!props.borderColor)? `var(--black)`: `var(--black)`};
-    color: ${props =>  (!props.borderColor)? `var(--black)`: `var(--black)`} !important;
+    border-color: ${props =>  props.hoverBackground ? props.hoverBackground: `var(--black)`};
+    color: ${props =>  props.hoverColor ? props.hoverColor: `var(--black)`} !important;
     background-color: transparent;
     cursor: pointer;
   }

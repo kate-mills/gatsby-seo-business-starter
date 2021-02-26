@@ -8,7 +8,14 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Banner title="Home Page" subtitle="Welcome to your new Gatsby site.  Now go build something great!">
       <FixedImage />
-      <Btn to="/contact" text="Contact us"/>
+      <Btn
+        to="/contact"
+        text="Contact us"
+        backgroundColor="var(--grey)"
+        color="var(--black)"
+        hoverColor="coral"
+        hoverBackground="hotpink"
+      />
     </Banner>
   </Layout>
 )

@@ -1,8 +1,8 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import { SEO, Banner, FluidImage, Title } from "../components/Complete"
+import { SEO, Banner, FluidImage, Title, Btn } from "../components/Complete"
 
 import styled from 'styled-components'
 
@@ -19,7 +19,7 @@ const About = ({ data }) => {
         <div className="centered-fluid-image">
           <FluidImage maxWidth="220px" fluid={data.seoImg.childImageSharp.fluid}/>
         </div>
-        <Link to="/">Go back to the homepage</Link>
+        <Btn to="/" text="Return to the homepage" />
       </Banner>
         <Title title="Our" subtitle="Location"/>
     </SectionWrapper>
