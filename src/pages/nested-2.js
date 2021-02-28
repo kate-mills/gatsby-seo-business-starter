@@ -5,16 +5,16 @@ import { SEO, Banner, FixedImage, Btn } from "../components/Complete"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Nested2" />
-    <Banner title="Nested 2" subtitle="Welcome to your new Gatsby site.  Now go build something great!">
+    <SEO title="Long Nested Link" />
+    <Banner title="Long Nested Link" subtitle="Welcome to your new Gatsby site.  Now go build something great!">
       <FixedImage />
       <Btn
         to="/contact"
         text="Contact us"
         backgroundColor="var(--grey)"
         color="var(--black)"
-        hoverColor="coral"
-        hoverBackground="hotpink"
+        hoverColor="var(--primaryColor)"
+        hoverBackground="var(--primaryDark)"
       />
     </Banner>
   </Layout>

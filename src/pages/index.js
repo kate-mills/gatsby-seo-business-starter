@@ -13,8 +13,8 @@ const IndexPage = () => (
         text="Contact us"
         backgroundColor="var(--grey)"
         color="var(--black)"
-        hoverColor="coral"
-        hoverBackground="hotpink"
+        hoverColor="var(--primaryColor)"
+        hoverBackground="var(--primaryDark)"
       />
     </Banner>
   </Layout>
