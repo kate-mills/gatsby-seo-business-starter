@@ -15,11 +15,11 @@ export default React.memo(
     organization,
     dateModified,
   }) => {
-    const linkCrumbs = navigationLinks.map(link => {
+    const linkCrumbs = navigationLinks.map((link, index) => {
       return {
         type: "ListItem",
         name: link.page,
-        position: link.id,
+        position: index+1,
         item: `${baseUrl}${link.path}`,
       }
     })

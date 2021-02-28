@@ -5,17 +5,14 @@ const navigationLinks = [
   {
     page: "Home",
     path: "/",
-    id: 1,
   },
   {
     page: "About",
     path: "/about/",
-    id: 2,
   },
   {
     page: "Contact",
     path: "/contact/",
-    id: 3,
   },
 ];
 

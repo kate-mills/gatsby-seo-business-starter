@@ -19,9 +19,9 @@ const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
           </button>
         </div>
         <ul className="links">
-          {navigationLinks.map(link => {
+          {navigationLinks.map((link, id) => {
             return (
-              <li key={link.id}>
+              <li key={id}>
                 {' '}
                 <Link to={link.path} onClick={toggleSidebar}>
                   {link.page}
