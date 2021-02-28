@@ -6,6 +6,7 @@ import "./layout.css"
 import { useGlobalContext } from '../context/context'
 
 
+
 const Layout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false)
   const {closeSubmenu} = useGlobalContext()
