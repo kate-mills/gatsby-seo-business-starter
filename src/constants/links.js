@@ -11,8 +11,8 @@ const navigationLinks = [
     page: "About",
     path: "/about/",
     links: [
-      { page: "Nested 1", path: "/nested-1/", },
-      { page: "Nested 2", path: "/nested-2/", },
+      { page: "Short", path: "/nested-1/", },
+      { page: "Long Nested Link", path: "/nested-2/", },
     ],
   },
   {
