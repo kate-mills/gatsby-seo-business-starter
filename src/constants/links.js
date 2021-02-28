@@ -5,14 +5,20 @@ const navigationLinks = [
   {
     page: "Home",
     path: "/",
+    links: [],
   },
   {
     page: "About",
     path: "/about/",
+    links: [
+      { page: "Nested 1", path: "/nested-1/", },
+      { page: "Nested 2", path: "/nested-2/", },
+    ],
   },
   {
     page: "Contact",
     path: "/contact/",
+    links: [],
   },
 ];
 
