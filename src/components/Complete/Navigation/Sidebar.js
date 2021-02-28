@@ -5,6 +5,7 @@ import { FaTimes } from 'react-icons/fa'
 import {Link} from "gatsby"
 import {navigationLinks} from '../../../constants/links'
 import {PhoneNumber} from '../ContactInfo'
+import SidebarSubLinks from './SidebarSublinks'
 
 const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
   return (
@@ -19,14 +20,19 @@ const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
           </button>
         </div>
         <ul className="links">
-          {navigationLinks.map((link, id) => {
+          {navigationLinks.map((link, index) => {
             return (
-              <li key={id}>
+              <>
+              <li key={index}>
                 {' '}
-                <Link to={link.path} onClick={toggleSidebar}>
-                  {link.page}
-                </Link>
+                {
+                  (link.links.length === 0) ? <Link to={link.path} onClick={toggleSidebar}> {link.page} </Link>
+                  :<span className="has-sublinks">{link.page}</span>
+                }
               </li>
+                <SidebarSubLinks links={link.links}/>
+              </>
+
             )
           })}
           <li className="tel-wrapper">
@@ -41,7 +47,6 @@ const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
 }
 
 const SidebarContainer = styled.div`
-  text-align: center;
   .sidebar-header {
     display: flex;
     justify-content: space-between;
@@ -69,6 +74,7 @@ const SidebarContainer = styled.div`
   .links {
     margin-bottom: 2rem;
   }
+  .links .has-sublinks,
   .links a {
     display: block;
     text-align: left;
@@ -80,7 +86,6 @@ const SidebarContainer = styled.div`
     transition: var(--transition);
     letter-spacing: var(--spacing);
   }
-
   .links a:hover {
     padding: 1rem 1.5rem;
     padding-left: 2rem;
