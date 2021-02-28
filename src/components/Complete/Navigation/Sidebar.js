@@ -5,7 +5,7 @@ import { FaTimes } from 'react-icons/fa'
 import {Link} from "gatsby"
 import {navigationLinks} from '../../../constants/links'
 import {PhoneNumber} from '../ContactInfo'
-import SidebarSubmenu from './SidebarSubmenu'
+import SidebarSubMenu from './SidebarSubmenu'
 
 const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
   return (
@@ -23,16 +23,11 @@ const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
           {navigationLinks.map((link, index) => {
             return (
               <>
-              <li key={index}>
-                {' '}
-                {
-                  (link.links.length === 0) ? <Link to={link.path} onClick={toggleSidebar}> {link.page} </Link>
-                  :<span className="has-sublinks">{link.page}</span>
-                }
-              </li>
-                <SidebarSubmenu links={link.links}/>
+                <li key={index}>
+                  <Link to={link.path} onClick={toggleSidebar}>{link.page}</Link>
+                </li>
+                <SidebarSubMenu links={link.links}/>
               </>
-
             )
           })}
           <li className="tel-wrapper">
@@ -74,7 +69,6 @@ const SidebarContainer = styled.div`
   .links {
     margin-bottom: 2rem;
   }
-  .links .has-sublinks,
   .links a {
     display: block;
     text-align: left;
